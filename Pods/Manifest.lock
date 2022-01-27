@@ -1,0 +1,32 @@
+PODS:
+  - BBMetalImage (1.2.0)
+  - lottie-ios (3.2.3)
+  - OpalImagePicker (3.0.0)
+  - Purchases (3.12.4):
+    - PurchasesCoreSwift (= 3.12.4)
+  - PurchasesCoreSwift (3.12.4)
+
+DEPENDENCIES:
+  - BBMetalImage
+  - lottie-ios
+  - OpalImagePicker
+  - Purchases
+
+SPEC REPOS:
+  trunk:
+    - BBMetalImage
+    - lottie-ios
+    - OpalImagePicker
+    - Purchases
+    - PurchasesCoreSwift
+
+SPEC CHECKSUMS:
+  BBMetalImage: 26873444685a9e9bae8d2c22aaccffcd29d9796c
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  OpalImagePicker: 38e772dd93a54431fc516b33e1f337c50f745834
+  Purchases: c451e29e3ceefaa8e7926a0d0d831b0f0ff39e32
+  PurchasesCoreSwift: c276d8c8df495271afebb0b090ec35117a0a827f
+
+PODFILE CHECKSUM: fa1d97bf3b6b2614395a9e6c85962e37741c7c5a
+
+COCOAPODS: 1.11.2
