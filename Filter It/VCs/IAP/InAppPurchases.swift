@@ -138,12 +138,6 @@ class InAppPurchases: UIViewController {
             }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        if UserDefaults.standard.getnumberOftimeAppOpen() > 1 {
-            requestToRate()
-        }
-        
-    }
     
     func Offer(price:String,save:String) -> NSAttributedString {
         let attrString = NSMutableAttributedString(string: price+"\n",

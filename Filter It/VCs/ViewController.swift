@@ -37,13 +37,13 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate {
             
         }else{
             
-            DispatchQueue.main.async {
-                let vc  = InAppPurchases()
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
+            if !UserDefaults.standard.isProMember(){
+                DispatchQueue.main.async {
+                    let vc  = InAppPurchases()
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+                }
             }
-            
-            
         }
         
     }
