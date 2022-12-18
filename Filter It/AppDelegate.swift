@@ -7,6 +7,8 @@
 
 import Purchases
 import UIKit
+import FirebaseCore
+
 
 var premiumFilters = [1,3,4,6]
 
@@ -26,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         UserDefaults.standard.setnumberOftimeAppOpen(value: UserDefaults.standard.getnumberOftimeAppOpen() + 1)
+      
+       FirebaseApp.configure()
         
         return true
     }

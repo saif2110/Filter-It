@@ -39,7 +39,7 @@ class PageOne: UIViewController {
             let vc = PageTwo()
             vc.modalPresentationStyle = .fullScreen
             if let topController = UIApplication.topViewController() {
-                topController.present(vc, animated: true, completion: nil)
+                topController.present(vc, animated: false, completion: nil)
             }
         }
     }

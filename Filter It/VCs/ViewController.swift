@@ -238,20 +238,24 @@ extension ViewController {
         
     }
     
-    func setupLivePreview() {
-        
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        
-        videoPreviewLayer.videoGravity = .resizeAspectFill
-        videoPreviewLayer.connection?.videoOrientation = .portrait
-        cameraView.layer.addSublayer(videoPreviewLayer)
-        
-        DispatchQueue.main.async {
-            self.captureSession.startRunning()
-            self.videoPreviewLayer.frame = self.cameraView.bounds
-        }
+  func setupLivePreview() {
+    
+    videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+    
+    videoPreviewLayer.videoGravity = .resizeAspectFill
+    videoPreviewLayer.connection?.videoOrientation = .portrait
+    cameraView.layer.addSublayer(videoPreviewLayer)
+    
+    DispatchQueue.global(qos: .background).async {
+      self.captureSession.startRunning()
     }
     
+    DispatchQueue.main.async {
+      self.videoPreviewLayer.frame = self.cameraView.bounds
+    }
+
+  }
+  
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         
