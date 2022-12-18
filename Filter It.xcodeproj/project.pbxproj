@@ -467,14 +467,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 959YZPX78D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Filter It/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Filter Pro";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app will use camera for taking photo";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save photo in your photo library";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app can select photos to edit";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app want to use camera for taking photo so app can apply filters on it";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save filtered photo in your photo library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to save choose photos from library to apply filters on it";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -487,7 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Filter-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -503,14 +503,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 959YZPX78D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Filter It/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Filter Pro";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app will use camera for taking photo";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save photo in your photo library";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app can select photos to edit";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app want to use camera for taking photo so app can apply filters on it";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save filtered photo in your photo library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to save choose photos from library to apply filters on it";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -523,7 +523,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Filter-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
