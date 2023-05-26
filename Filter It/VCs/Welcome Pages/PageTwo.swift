@@ -35,7 +35,7 @@ class PageTwo: UIViewController {
     @IBAction func next(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
-        dismiss(animated: true) {
+        dismiss(animated: false) {
             let vc = PageThree()
             vc.modalPresentationStyle = .fullScreen
             if let topController = UIApplication.topViewController() {

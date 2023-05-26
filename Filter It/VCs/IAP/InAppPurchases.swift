@@ -27,49 +27,13 @@ class InAppPurchases: UIViewController {
     @IBOutlet weak var continueOutlet: UIButton!{
         didSet{
             continueOutlet.clipsToBounds = true
-            continueOutlet.layer.cornerRadius = continueOutlet.bounds.height/2
+            continueOutlet.layer.cornerRadius = 17
         }
     }
     
-    @IBOutlet weak var WeekLowerLabel: UILabel!
-    @IBOutlet weak var WeekUpperLabel: UILabel!
-    
-    @IBOutlet weak var YearLowerLabel: UILabel!
-    @IBOutlet weak var YearUpperLabel: UILabel!
-    
-    @IBOutlet weak var WeekUpperView: UIView!
-    
-    
-    @IBOutlet weak var labelBannerWeek: UILabel!
-    @IBOutlet weak var labelBannerYear: UILabel!
-    
-    @IBOutlet weak var YearUpperView: UIView!
-    
-    @IBOutlet weak var weekView: UIView!
-    @IBOutlet weak var yearView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        customView(vw: weekView)
-        customView(vw: yearView)
-        
-        let weekViewGes = UITapGestureRecognizer()
-        weekView.addGestureRecognizer(weekViewGes)
-        weekViewGes.addTarget(self, action: #selector(weekViewtapped))
-        
-        let yearViewGes = UITapGestureRecognizer()
-        yearView.addGestureRecognizer(yearViewGes)
-        yearViewGes.addTarget(self, action: #selector(yearViewtapped))
-        
-        customLabelBanner(vw: labelBannerWeek)
-        upperView(vw: WeekUpperView)
-        upperView(vw: WeekUpperLabel)
-        
-        customLabelBanner(vw: labelBannerYear)
-        upperView(vw: YearUpperLabel)
-        upperView(vw: YearUpperView)
-        select(vw:weekView)
+    
         
         Purchases.shared.offerings { (offerings, error) in
             if let offerings = offerings {
@@ -90,13 +54,13 @@ class InAppPurchases: UIViewController {
                 
                 let pricetwo = offerings[IPA.OneYearPro.rawValue]?.annual?.localizedPriceString
                 
-                self.WeekLowerLabel.attributedText = self.Offer(price: "3 Days Free" , save: "Save 5%")
+              
                 
-                self.YearLowerLabel.attributedText = self.Offer(price: "Most Populer", save: "Save 26%")
+              
                 
-                self.labelBannerWeek.attributedText = self.PriceMessage(price: priceone ?? "$0.49")
+                //self.PriceMessage(price: priceone ?? "$0.49")
                 
-                self.labelBannerYear.attributedText = self.PriceMessage(price: pricetwo ?? "$0.49")
+               // self.PriceMessage(price: pricetwo ?? "$0.49")
                 
                 
             }
@@ -105,29 +69,10 @@ class InAppPurchases: UIViewController {
         
     }
 
-    var weekBool = true
-    
-    @objc func weekViewtapped(){
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
-        select(vw: weekView)
-        Deselect(vw: yearView)
-        selectedIPA = 0
-    }
-    
-    @objc func yearViewtapped(){
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
-        select(vw: yearView)
-        Deselect(vw: weekView)
-        selectedIPA = 1
-    }
+  
     
     override func viewDidAppear(_ animated: Bool) {
         backButtonoutlet.fadeIn()
-        continueOutlet.clipsToBounds = true
-        continueOutlet.layer.cornerRadius = continueOutlet.bounds.height/2
-        
         let photos = PHPhotoLibrary.authorizationStatus()
             if photos == .notDetermined {
                 PHPhotoLibrary.requestAuthorization({status in
@@ -253,7 +198,7 @@ extension UIView {
         
         UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
             self.isHidden = false
-            self.alpha = 0.4
+            self.alpha = 0.65
         }, completion: completion)
     }
 }
@@ -312,9 +257,6 @@ enum UserDefaultsKeys : String {
     case numberOftimeAppOpen
     case isProMember
     case islifeTimePro
-    
-    
-    
     case Useremail
     case Username
     case UserProfilePic
