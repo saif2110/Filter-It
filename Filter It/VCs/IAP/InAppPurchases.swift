@@ -17,12 +17,12 @@ enum IPA:String {
 
 
 var purpleColur = #colorLiteral(red: 0.1607843137, green: 0.1137254902, blue: 0.1725490196, alpha: 1)
-var selectedIPA = 0
+var selectedIPA = 1
 
 class InAppPurchases: UIViewController {
     
+    @IBOutlet weak var priceMain: UILabel!
     var AllPackage = [Purchases.Package]()
-    
     
     @IBOutlet weak var continueOutlet: UIButton!{
         didSet{
@@ -56,7 +56,7 @@ class InAppPurchases: UIViewController {
                 
               
                 
-              
+                self.priceMain.text = "Just \(priceone ?? "$0.49") per 1 month"
                 
                 //self.PriceMessage(price: priceone ?? "$0.49")
                 

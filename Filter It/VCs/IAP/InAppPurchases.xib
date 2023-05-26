@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="backButtonoutlet" destination="5uE-uW-i2W" id="dl9-Ie-WQh"/>
                 <outlet property="continueOutlet" destination="5vd-9Y-LCs" id="IZL-37-zyY"/>
+                <outlet property="priceMain" destination="Rn6-TK-ikF" id="Yza-xe-3wI"/>
                 <outlet property="view" destination="Txd-te-roG" id="5MJ-YK-s24"/>
             </connections>
         </placeholder>
@@ -110,7 +111,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro Features" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fts-Ry-eFX">
-                    <rect key="frame" x="15" y="526.5" width="389" height="51.5"/>
+                    <rect key="frame" x="15" y="529" width="389" height="51.5"/>
                     <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="42"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -124,8 +125,8 @@ No watermark. No Ads</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just $22.99 per 1 week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rn6-TK-ikF">
-                    <rect key="frame" x="20" y="578" width="374" height="30.5"/>
-                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="27"/>
+                    <rect key="frame" x="20" y="580.5" width="374" height="28"/>
+                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
