@@ -940,7 +940,7 @@
 		B5D5E29290DD78FC733910AC61987A69 /* Rectangle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Rectangle.swift"; sourceTree = "<group>"; };
 		B626866D5EDFCBE2A3A3F01E2C350F2C /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationView.swift"; sourceTree = "<group>"; };
 		B6C7891E66286C7F37653D4B3AD9E4D8 /* Pods-Filter It */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Filter It"; path = Pods_Filter_It.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BBMetalImage; path = BBMetalImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBMetalImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B73E420E4547C43E4EFA355B1D4E9161 /* BBMetalTiltShiftFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBMetalTiltShiftFilter.swift; path = BBMetalImage/BBMetalImage/BBMetalTiltShiftFilter.swift; sourceTree = "<group>"; };
 		B7994CACE90847D49C22F22FD6C82265 /* ReceiptStrings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReceiptStrings.swift; path = PurchasesCoreSwift/Logging/Strings/ReceiptStrings.swift; sourceTree = "<group>"; };
 		B844CE22234403C4102F3AEA469EFE9F /* RCProductInfoExtractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCProductInfoExtractor.h; path = Purchases/Purchasing/RCProductInfoExtractor.h; sourceTree = "<group>"; };
@@ -1696,7 +1696,7 @@
 		C5228D874457FDDB4F934E29B25797D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage */,
+				B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage.framework */,
 				51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */,
 				484151C077E2CEBBCACC4EBBF7727D98 /* OpalImagePicker */,
 				598756CCCB40FC98DA122084B3B8C925 /* OpalImagePickerResources.bundle */,
@@ -2056,7 +2056,7 @@
 			);
 			name = BBMetalImage;
 			productName = BBMetalImage;
-			productReference = B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage */;
+			productReference = B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C30D9AF70FACB7744A2823F7D636CE01 /* Pods-Filter It */ = {
@@ -2088,8 +2088,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -2698,11 +2698,10 @@
 			baseConfigurationReference = 4BEF3315B48357719A9906DC864A542C /* BBMetalImage.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 959YZPX78D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2839,11 +2838,10 @@
 			baseConfigurationReference = EFD28710E91EA1E2AC8B290921C2CA68 /* BBMetalImage.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 959YZPX78D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

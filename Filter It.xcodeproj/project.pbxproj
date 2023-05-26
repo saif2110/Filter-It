@@ -499,11 +499,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 959YZPX78D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Filter It/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Filter Pro";
+				INFOPLIST_KEY_CFBundleDisplayName = "Photo Effect";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app want to use camera for taking photo so app can apply filters on it";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save filtered photo in your photo library";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to save choose photos from library to apply filters on it";
@@ -519,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Filter-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -535,11 +535,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 959YZPX78D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Filter It/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Filter Pro";
+				INFOPLIST_KEY_CFBundleDisplayName = "Photo Effect";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app want to use camera for taking photo so app can apply filters on it";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save filtered photo in your photo library";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to save choose photos from library to apply filters on it";
@@ -555,7 +555,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Filter-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
