@@ -31,6 +31,8 @@ class InAppPurchases: UIViewController {
         }
     }
     
+    var isLoading = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -56,7 +58,7 @@ class InAppPurchases: UIViewController {
                 
               
                 
-                self.priceMain.text = "Just \(priceone ?? "$0.49") per 1 month"
+                self.priceMain.text = "Just \(priceone ?? "$0.49") per year"
                 
                 //self.PriceMessage(price: priceone ?? "$0.49")
                 
@@ -127,22 +129,27 @@ class InAppPurchases: UIViewController {
         vw.layer.cornerRadius = 10
         vw.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
-    
-    
+
     @IBAction func continueAction (_ sender: Any) {
-        if AllPackage.count > 0 {
-            startIndicator(selfo: self)
-            Purchases.shared.purchasePackage(AllPackage[selectedIPA]) { (transaction, purchaserInfo, error, userCancelled) in
-                if purchaserInfo?.entitlements.all[IPA.OneMonthPro.rawValue]?.isActive == true ||  purchaserInfo?.entitlements.all[IPA.OneYearPro.rawValue]?.isActive == true {
+        if !isLoading {
+            if AllPackage.count > 0 {
+                startIndicator(selfo: self)
+                Purchases.shared.purchasePackage(AllPackage[selectedIPA]) { (transaction, purchaserInfo, error, userCancelled) in
+                    self.isLoading = false
                     
-                    self.PerchesedComplte()
-                    
-                }else{
-                    
-                    stopIndicator()
+                    if purchaserInfo?.entitlements.all[IPA.OneMonthPro.rawValue]?.isActive == true ||  purchaserInfo?.entitlements.all[IPA.OneYearPro.rawValue]?.isActive == true {
+                        
+                        self.PerchesedComplte()
+                        
+                    }else{
+                        
+                        stopIndicator()
+                    }
                 }
             }
         }
+       
+        isLoading = true
     }
     
     func PerchesedComplte(){

@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,15 +25,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gla-QV-qwR" userLabel="bottomView">
-                    <rect key="frame" x="0.0" y="766" width="414" height="130"/>
+                    <rect key="frame" x="0.0" y="756" width="414" height="130"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vd-9Y-LCs">
                             <rect key="frame" x="20" y="10" width="374" height="54"/>
-                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <color key="backgroundColor" red="0.0051417910452819671" green="0.81414148000755693" blue="0.016829267317939507" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="54" id="4eD-vF-6Y4"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="21"/>
                             <state key="normal" title="CONTINUE">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -104,28 +103,28 @@
                         <action selector="back:" destination="-1" eventType="touchUpInside" id="gAV-0J-SH1"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〇 3-days free trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9N-Nh-v1G">
-                    <rect key="frame" x="20" y="705.5" width="374" height="30.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◉ 3-days free trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9N-Nh-v1G">
+                    <rect key="frame" x="20" y="700.5" width="374" height="30.5"/>
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="27"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro Features" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fts-Ry-eFX">
-                    <rect key="frame" x="15" y="529" width="389" height="51.5"/>
+                    <rect key="frame" x="15" y="524" width="389" height="51.5"/>
                     <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="42"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="De7-Dk-qEs">
-                    <rect key="frame" x="20" y="633.5" width="374" height="47"/>
+                    <rect key="frame" x="20" y="628.5" width="374" height="47"/>
                     <string key="text">Unlimited access
 No watermark. No Ads</string>
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just $22.99 per 1 week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rn6-TK-ikF">
-                    <rect key="frame" x="20" y="580.5" width="374" height="28"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just $00.00 per year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rn6-TK-ikF">
+                    <rect key="frame" x="20" y="575.5" width="374" height="28"/>
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -134,12 +133,12 @@ No watermark. No Ads</string>
             <viewLayoutGuide key="safeArea" id="INq-O1-J6S"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="gla-QV-qwR" secondAttribute="bottom" id="3PD-MM-jkM"/>
+                <constraint firstAttribute="bottom" secondItem="gla-QV-qwR" secondAttribute="bottom" constant="10" id="3PD-MM-jkM"/>
                 <constraint firstItem="De7-Dk-qEs" firstAttribute="top" secondItem="Rn6-TK-ikF" secondAttribute="bottom" constant="25" id="771-Zo-Dd5"/>
                 <constraint firstItem="De7-Dk-qEs" firstAttribute="leading" secondItem="INq-O1-J6S" secondAttribute="leading" constant="20" id="EW5-Kf-6qb"/>
                 <constraint firstItem="jsB-EX-xnh" firstAttribute="top" secondItem="Txd-te-roG" secondAttribute="top" id="FrP-Bf-LW2"/>
                 <constraint firstItem="gla-QV-qwR" firstAttribute="trailing" secondItem="INq-O1-J6S" secondAttribute="trailing" id="K42-ah-ui3"/>
-                <constraint firstItem="gla-QV-qwR" firstAttribute="top" secondItem="F9N-Nh-v1G" secondAttribute="bottom" constant="30" id="QzJ-TV-Wku"/>
+                <constraint firstItem="gla-QV-qwR" firstAttribute="top" secondItem="F9N-Nh-v1G" secondAttribute="bottom" constant="25" id="QzJ-TV-Wku"/>
                 <constraint firstItem="INq-O1-J6S" firstAttribute="trailing" secondItem="De7-Dk-qEs" secondAttribute="trailing" constant="20" id="VfR-JA-NME"/>
                 <constraint firstItem="Rn6-TK-ikF" firstAttribute="leading" secondItem="INq-O1-J6S" secondAttribute="leading" constant="20" id="VjB-jR-z87"/>
                 <constraint firstItem="fts-Ry-eFX" firstAttribute="leading" secondItem="INq-O1-J6S" secondAttribute="leading" constant="15" id="aNR-xV-jkF"/>
@@ -162,8 +161,5 @@ No watermark. No Ads</string>
     <resources>
         <image name="Happy_girl" width="541.5" height="960"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
