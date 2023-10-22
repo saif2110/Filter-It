@@ -24,7 +24,7 @@ class PhotoEditorVC: UIViewController,UIViewControllerTransitioningDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestToRate()
+        //requestToRate()
         
         NotificationCenter.default.addObserver(self, selector: #selector(okButtonPressed), name: Notification.Name("okButtonPressed"), object: nil)
         
