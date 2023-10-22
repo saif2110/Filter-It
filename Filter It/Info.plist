@@ -4,5 +4,11 @@
 <dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>Montserrat</string>
 </dict>
 </plist>

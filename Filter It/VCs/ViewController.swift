@@ -27,24 +27,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if UserDefaults.standard.getnumberOftimeAppOpen() == 1 {
-            
-            DispatchQueue.main.async {
-                let vc  = PageOne()
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
-            }
-            
-        }else{
-            
-            if !UserDefaults.standard.isProMember(){
-                DispatchQueue.main.async {
-                    let vc  = InAppPurchases()
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                }
-            }
-        }
+        onBoardingProcess()
         
     }
     
@@ -55,7 +38,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate {
             flash.setImage(UIImage(named: "thunder"),for: .normal)
         }
     }
-
+    
     @IBAction func flashAction(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
@@ -81,10 +64,10 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate {
         generator.impactOccurred()
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
         guard device.hasTorch else { return }
-
+        
         do {
             try device.lockForConfiguration()
-
+            
             if (device.torchMode == AVCaptureDevice.TorchMode.on) {
                 device.torchMode = AVCaptureDevice.TorchMode.off
                 flash.setImage(UIImage(named: "thunder"),for: .normal)
@@ -96,7 +79,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate {
                     print(error)
                 }
             }
-
+            
             device.unlockForConfiguration()
         } catch {
             print(error)
@@ -131,7 +114,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate {
         generator.impactOccurred()
         captureSession.removeInput(input)
         captureSession.removeOutput(stillImageOutput)
-
+        
         input.device.position == .back ? showFrontcamera() : showBackcamera()
         
     }
@@ -238,24 +221,49 @@ extension ViewController {
         
     }
     
-  func setupLivePreview() {
-    
-    videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-    
-    videoPreviewLayer.videoGravity = .resizeAspectFill
-    videoPreviewLayer.connection?.videoOrientation = .portrait
-    cameraView.layer.addSublayer(videoPreviewLayer)
-    
-    DispatchQueue.global(qos: .background).async {
-      self.captureSession.startRunning()
+    func setupLivePreview() {
+        
+        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        
+        videoPreviewLayer.videoGravity = .resizeAspectFill
+        videoPreviewLayer.connection?.videoOrientation = .portrait
+        cameraView.layer.addSublayer(videoPreviewLayer)
+        
+        DispatchQueue.global(qos: .background).async {
+            self.captureSession.startRunning()
+        }
+        
+        DispatchQueue.main.async {
+            self.videoPreviewLayer.frame = self.cameraView.bounds
+        }
+        
     }
     
-    DispatchQueue.main.async {
-      self.videoPreviewLayer.frame = self.cameraView.bounds
+    func onBoardingProcess(){
+        // == 1
+        if UserDefaults.standard.getnumberOftimeAppOpen() < 30 {
+            DispatchQueue.main.async {
+                let story = UIStoryboard(name: "Welcome", bundle: nil)
+                let vc = story.instantiateViewController(withIdentifier: "Nevigation")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false)
+            }
+            
+        }else{
+            openInappPurchase()
+        }
     }
-
-  }
-  
+    
+    func openInappPurchase()  {
+        if !UserDefaults.standard.isProMember(){
+            DispatchQueue.main.async {
+                let vc  = InAppPurchases()
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
+    }
+    
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         
@@ -266,7 +274,7 @@ extension ViewController {
             CIRAWFilterOption.noiseReductionAmount: 0.0,
             CIRAWFilterOption.luminanceNoiseReductionAmount: 0.0,
             CIRAWFilterOption.colorNoiseReductionAmount: 0.0]
-
+        
         // this is raw || use float value to adjust remaing data
         
         let rawFilter = CIFilter(imageData: imageData, options: options)
@@ -277,30 +285,30 @@ extension ViewController {
         imagePreview.image = UIImage(ciImage: image!)
         
         
-       let context = CIContext() // Prepare for create CGImage
+        let context = CIContext() // Prepare for create CGImage
         let cgimg = context.createCGImage((rawFilter?.outputImage)!, from: (rawFilter?.outputImage?.extent)!)
         let output = UIImage(cgImage: cgimg!)
         SelectedPhoto = output
         editButton.isHidden = false
         
-       UIImageWriteToSavedPhotosAlbum(output, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-    
+        UIImageWriteToSavedPhotosAlbum(output, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-            if let error = error {
-                // we got back an error!
-                showAlertWith(title: "Save error", message: error.localizedDescription)
-            } else {
-                showAlertWith(title: "Saved!", message: "Your image has been saved to your photos.")
-            }
+        if let error = error {
+            // we got back an error!
+            showAlertWith(title: "Save error", message: error.localizedDescription)
+        } else {
+            showAlertWith(title: "Saved!", message: "Your image has been saved to your photos.")
         }
-
-        func showAlertWith(title: String, message: String){
-            let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
-        }
+    }
+    
+    func showAlertWith(title: String, message: String){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
     
     
 }
