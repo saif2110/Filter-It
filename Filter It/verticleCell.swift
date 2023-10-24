@@ -108,11 +108,19 @@ class verticleCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let totalSpacing = 10 * 3 // 10 points spacing between cells, two on each side
+        let availableWidth = collectionView.bounds.width - CGFloat(totalSpacing)
+
+        // Calculate the width for each cell (divide available width by 2 for two cells in one row)
+        let cellWidth = availableWidth / 2
         
-        let size = self.contentView.bounds.width / 2.1
+        // Set the height to be the same as the width to make it a square cell
+        let cellHeight = cellWidth
         
-        return CGSize(width: size , height: size)
+        // Return the CGSize with equal width and height for the cell
+        return CGSize(width: cellWidth, height: cellHeight)
     }
+
     
     
     func calldelegate(){

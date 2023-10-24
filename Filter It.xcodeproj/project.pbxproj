@@ -10,8 +10,6 @@
 		16B149AD3ADCDCF881831A2E /* Pods_Filter_It.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC207373B3A8B41E105A842 /* Pods_Filter_It.framework */; };
 		845A92EA2A20C18A00651D35 /* TypeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845A92E92A20C18A00651D35 /* TypeVC.xib */; };
 		845A92EC2A20C19500651D35 /* TypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A92EB2A20C19500651D35 /* TypeVC.swift */; };
-		84749B512AE5199B004FBAE1 /* selectType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84749B502AE5199B004FBAE1 /* selectType.xib */; };
-		84749B532AE5199D004FBAE1 /* selectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84749B522AE5199D004FBAE1 /* selectType.swift */; };
 		84749B6C2AE51FE5004FBAE1 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84749B552AE51FE5004FBAE1 /* Montserrat-VariableFont_wght.ttf */; };
 		84749B6D2AE51FE5004FBAE1 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84749B562AE51FE5004FBAE1 /* Montserrat-Italic-VariableFont_wght.ttf */; };
 		84749B6E2AE51FE5004FBAE1 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84749B582AE51FE5004FBAE1 /* Montserrat-LightItalic.ttf */; };
@@ -34,6 +32,8 @@
 		84749B7F2AE51FE5004FBAE1 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84749B692AE51FE5004FBAE1 /* Montserrat-ExtraBoldItalic.ttf */; };
 		84749B802AE51FE5004FBAE1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84749B6A2AE51FE5004FBAE1 /* OFL.txt */; };
 		84749B812AE51FE5004FBAE1 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84749B6B2AE51FE5004FBAE1 /* README.txt */; };
+		84749B852AE520CA004FBAE1 /* selectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84749B832AE520CA004FBAE1 /* selectType.swift */; };
+		84749B862AE520CA004FBAE1 /* selectType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84749B842AE520CA004FBAE1 /* selectType.xib */; };
 		84B94E102AE5156C00A2B210 /* WelcomeEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B94E052AE5156C00A2B210 /* WelcomeEnd.swift */; };
 		84B94E112AE5156C00A2B210 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B94E062AE5156C00A2B210 /* Welcome.storyboard */; };
 		84B94E152AE5156C00A2B210 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B94E0B2AE5156C00A2B210 /* WelcomeModel.swift */; };
@@ -69,8 +69,6 @@
 		0F63B7DE4BE6DC72BC859584 /* Pods-Filter It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filter It.debug.xcconfig"; path = "Target Support Files/Pods-Filter It/Pods-Filter It.debug.xcconfig"; sourceTree = "<group>"; };
 		845A92E92A20C18A00651D35 /* TypeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeVC.xib; sourceTree = "<group>"; };
 		845A92EB2A20C19500651D35 /* TypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeVC.swift; sourceTree = "<group>"; };
-		84749B502AE5199B004FBAE1 /* selectType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = selectType.xib; sourceTree = "<group>"; };
-		84749B522AE5199D004FBAE1 /* selectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectType.swift; sourceTree = "<group>"; };
 		84749B552AE51FE5004FBAE1 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		84749B562AE51FE5004FBAE1 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		84749B582AE51FE5004FBAE1 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -93,6 +91,8 @@
 		84749B692AE51FE5004FBAE1 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		84749B6A2AE51FE5004FBAE1 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		84749B6B2AE51FE5004FBAE1 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		84749B832AE520CA004FBAE1 /* selectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectType.swift; sourceTree = "<group>"; };
+		84749B842AE520CA004FBAE1 /* selectType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = selectType.xib; sourceTree = "<group>"; };
 		84B94E052AE5156C00A2B210 /* WelcomeEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeEnd.swift; sourceTree = "<group>"; };
 		84B94E062AE5156C00A2B210 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		84B94E0B2AE5156C00A2B210 /* WelcomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
@@ -196,6 +196,15 @@
 			path = static;
 			sourceTree = "<group>";
 		};
+		84749B822AE520CA004FBAE1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84749B832AE520CA004FBAE1 /* selectType.swift */,
+				84749B842AE520CA004FBAE1 /* selectType.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		84A1690F2AE515CF004ACC68 /* WelcomeCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +218,7 @@
 				84A1690F2AE515CF004ACC68 /* WelcomeCells */,
 				84B94E052AE5156C00A2B210 /* WelcomeEnd.swift */,
 				84B94E062AE5156C00A2B210 /* Welcome.storyboard */,
+				84749B822AE520CA004FBAE1 /* Cell */,
 				84B94E0B2AE5156C00A2B210 /* WelcomeModel.swift */,
 			);
 			path = WelcomePages;
@@ -291,10 +301,8 @@
 				B0857F8A279DB2A700B15C4F /* PageThree.swift */,
 				B0857F8B279DB2A700B15C4F /* PageThree.xib */,
 				B06BFEAE279DAFD600C326A0 /* PageTwo.swift */,
-				84749B522AE5199D004FBAE1 /* selectType.swift */,
 				B06BFEAD279DAFD600C326A0 /* PageTwo.xib */,
 				B007CF41279D78A600493B6D /* PageOne.swift */,
-				84749B502AE5199B004FBAE1 /* selectType.xib */,
 				B007CF42279D78A600493B6D /* PageOne.xib */,
 				845A92EB2A20C19500651D35 /* TypeVC.swift */,
 				845A92E92A20C18A00651D35 /* TypeVC.xib */,
@@ -372,6 +380,7 @@
 				84749B712AE51FE5004FBAE1 /* Montserrat-Light.ttf in Resources */,
 				B007CF56279D83E200493B6D /* PageOne.json in Resources */,
 				B08B436A274A3C6C003B0791 /* LaunchScreen.storyboard in Resources */,
+				84749B862AE520CA004FBAE1 /* selectType.xib in Resources */,
 				84749B7D2AE51FE5004FBAE1 /* Montserrat-Italic.ttf in Resources */,
 				B007CF44279D78A600493B6D /* PageOne.xib in Resources */,
 				845A92EA2A20C18A00651D35 /* TypeVC.xib in Resources */,
@@ -380,7 +389,6 @@
 				84749B782AE51FE5004FBAE1 /* Montserrat-SemiBold.ttf in Resources */,
 				84749B812AE51FE5004FBAE1 /* README.txt in Resources */,
 				84B94E112AE5156C00A2B210 /* Welcome.storyboard in Resources */,
-				84749B512AE5199B004FBAE1 /* selectType.xib in Resources */,
 				84749B722AE51FE5004FBAE1 /* Montserrat-ThinItalic.ttf in Resources */,
 				84749B7E2AE51FE5004FBAE1 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				84749B772AE51FE5004FBAE1 /* Montserrat-BlackItalic.ttf in Resources */,
@@ -456,11 +464,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84749B532AE5199D004FBAE1 /* selectType.swift in Sources */,
 				B0A8306A27554D27003B20F3 /* ImagePickerVC.swift in Sources */,
 				B08B4372274A3D63003B0791 /* ImageFilter.swift in Sources */,
 				B08B4362274A3C6B003B0791 /* ViewController.swift in Sources */,
 				B007CF43279D78A600493B6D /* PageOne.swift in Sources */,
+				84749B852AE520CA004FBAE1 /* selectType.swift in Sources */,
 				84B94E102AE5156C00A2B210 /* WelcomeEnd.swift in Sources */,
 				B0332FE82782DDCE00990D30 /* FavViewController.swift in Sources */,
 				B08B435E274A3C6B003B0791 /* AppDelegate.swift in Sources */,

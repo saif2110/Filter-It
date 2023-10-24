@@ -13,12 +13,11 @@ class selectType: UICollectionViewCell {
     @IBOutlet weak var imageVIew: UIImageView!
     
     @IBOutlet weak var typeTXT: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         blueView.layer.borderWidth = 2
-        blueView.layer.borderColor = tintColor.cgColor
+        blueView.layer.borderColor = mainColor.cgColor
         //blueView.layer.backgroundColor = UIColor.systemGroupedBackground.cgColor
         blueView.layer.cornerRadius = 8
         blueView.clipsToBounds = true

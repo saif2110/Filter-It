@@ -70,6 +70,18 @@ extension UIView {
             }
         }
     }
+
+    
+    @IBInspectable var shadowLight: Bool {
+        get {
+            return layer.shadowOpacity > 0.0
+        }
+        set {
+            if newValue == true {
+                self.addShadow2()
+            }
+        }
+    }
     
     @IBInspectable var isCircle: Bool {
         get {
@@ -109,9 +121,21 @@ extension UIView {
     }
     
     
-    func addShadow(shadowColor: CGColor = UIColor.gray.cgColor,
+    func addShadow(shadowColor: CGColor = UIColor.lightGray.cgColor,
                    shadowOffset: CGSize = CGSize(width: 0, height: 0),
-                   shadowOpacity: Float = 1.0,
+                   shadowOpacity: Float = 0.8,
+                   shadowRadius: CGFloat = 4.0) {
+        layer.shadowColor = shadowColor
+        layer.shadowOffset = shadowOffset
+        layer.shadowOpacity = shadowOpacity
+        layer.shadowRadius = shadowRadius
+        self.center = center
+    }
+    
+    
+    func addShadow2(shadowColor: CGColor = UIColor.lightGray.cgColor,
+                   shadowOffset: CGSize = CGSize(width: 0, height: 0),
+                   shadowOpacity: Float = 0.75,
                    shadowRadius: CGFloat = 4.0) {
         layer.shadowColor = shadowColor
         layer.shadowOffset = shadowOffset
@@ -127,9 +151,9 @@ extension UIImageView {
     func applyshadowWithCorner(containerView : UIView, cornerRadious : CGFloat){
         containerView.clipsToBounds = false
         containerView.layer.shadowColor = UIColor.lightGray.cgColor
-        containerView.layer.shadowOpacity = 3
+        containerView.layer.shadowOpacity = 0.7
         containerView.layer.shadowOffset = CGSize.zero
-        containerView.layer.shadowRadius = 4
+        containerView.layer.shadowRadius = 3
         containerView.layer.cornerRadius = cornerRadious
         //containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: cornerRadious).cgPath
         self.clipsToBounds = true

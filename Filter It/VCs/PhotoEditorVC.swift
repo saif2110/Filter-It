@@ -32,6 +32,10 @@ class PhotoEditorVC: UIViewController,UIViewControllerTransitioningDelegate {
         
         addAllfiltertoVC()
         
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.reloadData()
+        
     }
     
     var favArray = [UIImage]()
@@ -147,7 +151,7 @@ extension PhotoEditorVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "verticleCell", for: indexPath) as! verticleCell
         
-//        print(mainTitleArray[indexPath.row],parentImagearray[indexPath.row].count)
+        //        print(mainTitleArray[indexPath.row],parentImagearray[indexPath.row].count)
         
         print(parentImagearray[indexPath.row].count)
         
@@ -161,8 +165,15 @@ extension PhotoEditorVC:UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.reloadData()
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 290
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -172,11 +183,9 @@ extension PhotoEditorVC:UITableViewDelegate,UITableViewDataSource{
     
     @objc func okButtonPressed(notification: Notification) {
         DispatchQueue.main.async {
-            self.tableView.delegate = self
-            self.tableView.dataSource = self
-            self.tableView.reloadData()
-        }
             
+        }
+        
         
     }
     
@@ -188,8 +197,8 @@ extension PhotoEditorVC:UITableViewDelegate,UITableViewDataSource{
         generator.impactOccurred()
         
         if let userInfo = notification.userInfo {
-//            print(userInfo["row"] ?? 0)
-//            print(userInfo["item"] ?? 0)
+            //            print(userInfo["row"] ?? 0)
+            //            print(userInfo["item"] ?? 0)
             
             DispatchQueue.main.async {
                 let main = UIStoryboard.init(name: "Main", bundle: Bundle.main)

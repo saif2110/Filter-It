@@ -35,7 +35,8 @@ class InAppPurchases: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+      
+        requestToRate()
         
         Purchases.shared.offerings { (offerings, error) in
             if let offerings = offerings {

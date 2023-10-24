@@ -17,6 +17,7 @@ class FavViewController: UIViewController,UICollectionViewDelegate,UICollectionV
         cell.photoView.image = arrayofFavimages[indexPath.row]
         cell.favAddButton.isHidden = true
         cell.premiumLabal.isHidden = true
+        cell.config(isShadowon: false)
         
         
         return cell
@@ -85,10 +86,17 @@ class FavViewController: UIViewController,UICollectionViewDelegate,UICollectionV
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let totalSpacing = 10 * 3 // 10 points spacing between cells, two on each side
+        let availableWidth = collectionView.bounds.width - CGFloat(totalSpacing)
+
+        // Calculate the width for each cell (divide available width by 2 for two cells in one row)
+        let cellWidth = availableWidth / 2
         
-        let size = self.myView.bounds.width / 2.1
+        // Set the height to be the same as the width to make it a square cell
+        let cellHeight = cellWidth
         
-        return CGSize(width: size , height: size)
+        // Return the CGSize with equal width and height for the cell
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 
 
@@ -110,4 +118,18 @@ extension UIApplication {
         }
         return controller
     }
+}
+
+
+class DynamicCollectionView: UICollectionView {
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    if !__CGSizeEqualToSize(bounds.size, self.intrinsicContentSize) {
+        self.invalidateIntrinsicContentSize()
+     }
+  }
+
+   override var intrinsicContentSize: CGSize {
+    return collectionViewLayout.collectionViewContentSize
+   }
 }

@@ -16,7 +16,6 @@ class WelcomeEnd: UIViewController {
     
     @IBAction func contineBotton(_ sender: Any) {
         let vc = TypeVC()
-        vc.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

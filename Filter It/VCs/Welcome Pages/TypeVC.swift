@@ -9,11 +9,14 @@ import UIKit
 import AppTrackingTransparency
 
 var isFirsttimeClick = true
+let mainColor = #colorLiteral(red: 0, green: 0.6928513646, blue: 0.6272605658, alpha: 1)
 
 class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+ 
+   
     
     @IBOutlet weak var mainTitle: UILabel!
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         type.count
     }
@@ -52,13 +55,13 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     func select(cell:selectType) {
         cell.typeTXT.textColor = .white
         cell.imageVIew.tintColor = .white
-        cell.blueView.backgroundColor = UIColor.systemGreen
+        cell.blueView.backgroundColor = mainColor
         //cell.blueView.layer.borderColor = tintColor.cgColor
         
         selectdType.append(cell.typeTXT.text!)
         if selectdType.count > 2{
             getStartedOutlet.isEnabled = true
-            getStartedOutlet.backgroundColor = UIColor.systemGreen
+            getStartedOutlet.backgroundColor = mainColor
             getStartedOutlet.setTitle(isFirsttimeClick ? "CONTINUE" : "GET STARTED", for: .normal)
         }
     }
@@ -72,7 +75,7 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         selectdType.removeAll { $0 == cell.typeTXT.text! }
         if selectdType.count < 3{
             getStartedOutlet.isEnabled = false
-            getStartedOutlet.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.3)
+            getStartedOutlet.backgroundColor = mainColor.withAlphaComponent(0.3)
             getStartedOutlet.setTitle("SELECT THREE", for: .normal)
             
         }
@@ -119,7 +122,7 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         mainTitle.text = isFirsttimeClick ? "Why you want use this app for ?" : "What you like the most in editing apps ?"
         
         getStartedOutlet.isEnabled = false
-        getStartedOutlet.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.3)
+        getStartedOutlet.backgroundColor = mainColor.withAlphaComponent(0.3)
         getStartedOutlet.setTitleColor(UIColor.white, for: .normal)
         
         getStartedOutlet.setTitle("SELECT THREE", for: .normal)
@@ -138,29 +141,21 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     @IBAction func getStarted(_ sender: Any) {
         if isFirsttimeClick {
             //same page
-         
-            dismiss(animated: true) {
-                let vc = TypeVC()
-                
-                vc.type = ["Versatility","Flexibility","Efficiency","Control","Creativity","Filters","Effects","AI"]
-                
-                vc.modalPresentationStyle = .fullScreen
-                if let topController = UIApplication.topViewController() {
-                    topController.present(vc, animated: false, completion: nil)
-                }
-            }
+            
+            
+            let vc = TypeVC()
+            
+            vc.type = ["Versatility","Flexibility","Efficiency","Control","Creativity","Filters","Effects","AI"]
+            
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+            
             
         }else{
             
             //continue
-            dismiss(animated: true) {
                 let vc = InAppPurchases()
-                vc.modalPresentationStyle = .fullScreen
-                if let topController = UIApplication.topViewController() {
-                    topController.present(vc, animated: false, completion: nil)
-                }
-            }
-            
+                self.navigationController?.pushViewController(vc, animated: true)
         }
         
         

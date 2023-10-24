@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,7 +29,7 @@
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tD2-vS-pM9">
                     <rect key="frame" x="20" y="62" width="30" height="31.5"/>
-                    <color key="tintColor" systemColor="systemGreenColor"/>
+                    <color key="tintColor" red="0.3058823645" green="0.68235301969999995" blue="0.62745100259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="cew-Qb-mVM"/>
                         <constraint firstAttribute="width" constant="30" id="hwZ-9A-SNl"/>
@@ -48,7 +47,7 @@
                 </collectionView>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7F-wx-psg">
                     <rect key="frame" x="15" y="797" width="384" height="50"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <color key="backgroundColor" red="0.3058823645" green="0.68235301969999995" blue="0.62745100259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="aQS-8W-ZbA"/>
                     </constraints>
@@ -87,8 +86,5 @@
     </objects>
     <resources>
         <image name="lightbulb.fill" catalog="system" width="92" height="128"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

@@ -14,10 +14,17 @@ class mainCell: UICollectionViewCell {
     
     @IBOutlet weak var premiumLabal: UILabel!
     
-    @IBOutlet weak var photoView: UIImageView!{
-        didSet{
-            photoView.applyshadowWithCorner(containerView: self, cornerRadious: 0)
+    @IBOutlet weak var photoView: UIImageView!
+    
+    func config(isShadowon:Bool = true) {
+        
+        if isShadowon {
+            photoView.applyshadowWithCorner(containerView: self, cornerRadious: 10)
+        }else{
+            self.clipsToBounds = true
+            self.layer.cornerRadius = 10
         }
+        
     }
 }
 
