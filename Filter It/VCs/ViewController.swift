@@ -241,7 +241,7 @@ extension ViewController {
     
     func onBoardingProcess(){
         // == 1
-        if UserDefaults.standard.getnumberOftimeAppOpen() != 1 {
+        if UserDefaults.standard.getnumberOftimeAppOpen() == 1 {
             DispatchQueue.main.async {
                 let story = UIStoryboard(name: "Welcome", bundle: nil)
                 let vc = story.instantiateViewController(withIdentifier: "Nevigation")

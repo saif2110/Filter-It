@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        Apps15init.shared.start(id: "com.Filter-It")
+        
         Purchases.logLevel = .debug
         Purchases.configure(withAPIKey: "appl_yhlBkfnbkEMelAFuCdpQTDSAUmw")
         isSubsActive()

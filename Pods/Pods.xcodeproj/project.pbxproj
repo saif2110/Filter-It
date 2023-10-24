@@ -838,6 +838,7 @@
 		8351167D68EE49ADF4F434BE07360407 /* OpalImagePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpalImagePicker-umbrella.h"; sourceTree = "<group>"; };
 		83C0628922B91780C26FF1D5AD56E5BF /* BBMetalMaskBlendFilter.metal */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.metal; name = BBMetalMaskBlendFilter.metal; path = BBMetalImage/BBMetalImage/BBMetalMaskBlendFilter.metal; sourceTree = "<group>"; };
 		83C0F19E8083C99926A468A618B606A3 /* ASN1ContainerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASN1ContainerBuilder.swift; path = PurchasesCoreSwift/LocalReceiptParsing/Builders/ASN1ContainerBuilder.swift; sourceTree = "<group>"; };
+		846BC2ED2AE82F6200AD428C /* Apps15init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Apps15init.swift; path = "../Filter It/Apps15init.swift"; sourceTree = "<group>"; };
 		859AE1BE99BE48C45522E522475CC0E1 /* RCEntitlementInfo+Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RCEntitlementInfo+Protected.h"; path = "Purchases/ProtectedExtensions/RCEntitlementInfo+Protected.h"; sourceTree = "<group>"; };
 		85BBB28FC88C7E96593F5DDCCB82A35F /* RCAttributionData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCAttributionData.h; path = Purchases/Attribution/RCAttributionData.h; sourceTree = "<group>"; };
 		8626AA6CB10FA7C4F073EABF0A1FE51A /* RCIntroEligibility+Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RCIntroEligibility+Protected.h"; path = "Purchases/ProtectedExtensions/RCIntroEligibility+Protected.h"; sourceTree = "<group>"; };
@@ -1710,6 +1711,7 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
+				846BC2ED2AE82F6200AD428C /* Apps15init.swift */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				B94D7768568A9992200DB461E8CF687F /* Frameworks */,
 				A9783DE613F86D0FE0464DEBBB8DAA43 /* Pods */,

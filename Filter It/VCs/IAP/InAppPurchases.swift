@@ -24,18 +24,13 @@ class InAppPurchases: UIViewController {
     @IBOutlet weak var priceMain: UILabel!
     var AllPackage = [Purchases.Package]()
     
-    @IBOutlet weak var continueOutlet: UIButton!{
-        didSet{
-            continueOutlet.clipsToBounds = true
-            continueOutlet.layer.cornerRadius = 17
-        }
-    }
+    @IBOutlet weak var continueOutlet: UIButton!
     
     var isLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         requestToRate()
         
         Purchases.shared.offerings { (offerings, error) in
@@ -57,33 +52,35 @@ class InAppPurchases: UIViewController {
                 
                 let pricetwo = offerings[IPA.OneYearPro.rawValue]?.annual?.localizedPriceString
                 
-              
                 
-                self.priceMain.text = "Just \(priceone ?? "$0.49") per year"
+                self.priceMain.text = "Unlock the full potential with a pro membership. Three days free then just \(String(describing: pricetwo ?? "")) billed yearly auto renewable."
                 
                 //self.PriceMessage(price: priceone ?? "$0.49")
                 
-               // self.PriceMessage(price: pricetwo ?? "$0.49")
+                // self.PriceMessage(price: pricetwo ?? "$0.49")
                 
                 
             }
-           
+            
         }
         
     }
-
-  
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
-        backButtonoutlet.fadeIn()
+        if !Apps15init.shared.HSB {
+            backButtonoutlet.fadeIn()
+        }
+       
         let photos = PHPhotoLibrary.authorizationStatus()
-            if photos == .notDetermined {
-                PHPhotoLibrary.requestAuthorization({status in
-                    if status == .authorized{
-                       
-                    } else {}
-                })
-            }
+        if photos == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized{
+                    
+                } else {}
+            })
+        }
     }
     
     
@@ -130,7 +127,7 @@ class InAppPurchases: UIViewController {
         vw.layer.cornerRadius = 10
         vw.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
-
+    
     @IBAction func continueAction (_ sender: Any) {
         if !isLoading {
             if AllPackage.count > 0 {
@@ -149,7 +146,7 @@ class InAppPurchases: UIViewController {
                 }
             }
         }
-       
+        
         isLoading = true
     }
     
@@ -172,7 +169,7 @@ class InAppPurchases: UIViewController {
             }
         }
         
-       
+        
     }
     
     
@@ -206,7 +203,7 @@ extension UIView {
         
         UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
             self.isHidden = false
-            self.alpha = 0.65
+            self.alpha = 0.35
         }, completion: completion)
     }
 }
@@ -240,7 +237,7 @@ var indicator = UIActivityIndicatorView()
 
 func startIndicator(selfo:UIViewController) {
     indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
-    indicator.color = purpleColur
+    indicator.color = mainColor
     indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
     indicator.center = selfo.view.center
     selfo.view.addSubview(indicator)
